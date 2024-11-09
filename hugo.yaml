@@ -20,33 +20,59 @@ defaultContentLanguage: zh
 defaultContentLanguageInSubdir: false
 
 languages:
-  zh:
-    languageName: "中文"
-    weight: 1
-    taxonomies:
-      category: categories
-      tag: tags
-      
-    menus:
-      main:
-        - name: 首页
-          pageRef: /
-          weight: 4
-        - name: 归档
-          pageRef: archives/
-          weight: 5
-        - name: 分类
-          pageRef: categories/
-          weight: 10
-        - name: 标签
-          pageRef: tags/
-          weight: 10
-        - name: 搜索
-          pageRef: search/
-          weight: 20
-        - name: 关于
-          pageRef: about/
-          weight: 21
+    zh:
+      languageName: "zh-cn"
+      # contentDir: content/english
+      weight: 1
+      profileMode:
+        enabled: true
+        title: (〃'▽'〃)
+        subtitle: "🧨学而时习之，不亦说乎？有朋自远方来，不亦乐乎？<br/>👏🏼欢迎光临素履(Sulv)的博客<br/>👇联系方式"
+        imageUrl: "static/profile.png"
+        imageTitle: 
+        imageWidth: 150
+        imageHeight: 150
+        buttons:
+          - name: 👨🏻‍💻技术
+            url: posts/tech
+          - name: 📕阅读
+            url: posts/read
+          - name: 🏖生活
+            url: posts/life
+      menu:
+        main:
+          - identifier: search
+            name: 搜索
+            url: search
+            weight: 1
+          - identifier: home
+            name: 主页
+            url: /
+            weight: 2
+          - identifier: posts
+            name: 文章
+            url: posts
+            weight: 3
+          # - identifier: tech
+          #   name: 技术文章
+          #   url: posts/tech
+          #   weight: 5
+          # - identifier: life
+          #   name: 🏖记录生活
+          #   url: posts/life
+          #   weight: 6
+          - identifier: archives
+            name: 时间轴
+            url: archives/
+            weight: 20
+          # - identifier: categories
+          #   name: 分类
+          #   url: categories
+          #   weight: 30
+          - identifier: tags
+            name: 标签
+            url: tags
+            weight: 40
 
 paginate: 8
 

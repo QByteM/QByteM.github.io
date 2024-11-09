@@ -1,6 +1,6 @@
 ---
 date: '2024-11-09T19:45:17+08:00'
-title: 'Introduction_to_my_blog'
+title: 'Introduction to my blog'
 ---
 
-本人使用博客主要用于更新自己平时学习遇到的问题以及解决思路。
+I will 
