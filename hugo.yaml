@@ -27,7 +27,7 @@ languages:
         enabled: true
         title: "QByteM's Blog"
         subtitle: "莫道功名需百战，愿效滴水洞石穿"
-        imageUrl: "./profile.png"
+        imageUrl: "./images/profile.png"
         imageTitle: Handsome look
         imageWidth: 150
         imageHeight: 150
@@ -85,11 +85,11 @@ params:
   tocopen: false
 
   assets:
-    favicon: "favicon.png"
-    favicon16x16: "favicon.png"
-    favicon32x32: "favicon.png"
-    apple_touch_icon: "favicon.png"
-    safari_pinned_tab: "favicon.png"
+    favicon: "images/favicon.png"
+    favicon16x16: "images/favicon.png"
+    favicon32x32: "images/favicon.png"
+    apple_touch_icon: "images/favicon.png"
+    safari_pinned_tab: "images/favicon.png"
 
   label:
     text: "Home"
