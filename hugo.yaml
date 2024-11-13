@@ -22,55 +22,35 @@ defaultContentLanguageInSubdir: false
 languages:
     zh:
       languageName: "zh-cn"
-      # contentDir: content/english
       weight: 1
       profileMode:
         enabled: true
-        title: (〃'▽'〃)
-        subtitle: "🧨学而时习之，不亦说乎？有朋自远方来，不亦乐乎？<br/>👏🏼欢迎光临素履(Sulv)的博客<br/>👇联系方式"
-        imageUrl: "static/profile.png"
-        imageTitle: 
+        title: "QByteM's Blog"
+        subtitle: "莫道功名需百战，愿效滴水洞石穿"
+        imageUrl: "./profile.png"
+        imageTitle: Handsome look
         imageWidth: 150
         imageHeight: 150
-        buttons:
-          - name: 👨🏻‍💻技术
-            url: posts/tech
-          - name: 📕阅读
-            url: posts/read
-          - name: 🏖生活
-            url: posts/life
       menu:
         main:
           - identifier: search
-            name: 搜索
+            name: Search
             url: search
             weight: 1
-          - identifier: home
-            name: 主页
-            url: /
-            weight: 2
           - identifier: posts
-            name: 文章
+            name: Blog
             url: posts
             weight: 3
-          # - identifier: tech
-          #   name: 技术文章
-          #   url: posts/tech
-          #   weight: 5
-          # - identifier: life
-          #   name: 🏖记录生活
-          #   url: posts/life
-          #   weight: 6
+          - identifier: Publications
+            name: Publications
+            url: "https://scholar.google.com/citations?hl=zh-CN&vq=en&view_op=list_hcore&venue=FXe-a9w0eycJ.2024"
+            weight: 3
           - identifier: archives
-            name: 时间轴
+            name: Timeline
             url: archives/
             weight: 20
-          # - identifier: categories
-          #   name: 分类
-          #   url: categories
-          #   weight: 30
           - identifier: tags
-            name: 标签
+            name: Tags
             url: tags
             weight: 40
 
@@ -226,6 +206,12 @@ concurrency:
 defaults:
   run:
     shell: bash
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 jobs:
   # Build job
