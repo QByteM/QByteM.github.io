@@ -1,0 +1,22 @@
+{% assign item = include.item %}
+{% assign project_url = item.projectpageurl | default: item.projecturl %}
+{% assign translation_url = item.translationurl_cn | default: item.paperurl_cn %}
+{% assign interpretation_url = item.interpretationurl_cn | default: item.explanationurl_cn %}
+{% assign code_url = item.codeurl | default: item.githuburl %}
+{% assign official_url = item.officialurl | default: item.officialversionurl %}
+{% capture publication_links %}
+  {% if item.paperurl %}<a href="{{ item.paperurl }}">PDF</a>{% endif %}
+  {% if project_url %}{% if item.paperurl %} | {% endif %}<a href="{{ project_url }}">Project Page</a>{% endif %}
+  {% if translation_url %}{% if item.paperurl or project_url %} | {% endif %}<a href="{{ translation_url }}">中译版</a>{% endif %}
+  {% if interpretation_url %}{% if item.paperurl or project_url or translation_url %} | {% endif %}<a href="{{ interpretation_url }}">中文解读</a>{% endif %}
+  {% if code_url %}{% if item.paperurl or project_url or translation_url or interpretation_url %} | {% endif %}<a href="{{ code_url }}">Code</a>{% endif %}
+  {% if official_url %}{% if item.paperurl or project_url or translation_url or interpretation_url or code_url %} | {% endif %}<a href="{{ official_url }}">Official Version</a>{% endif %}
+{% endcapture %}
+{% assign publication_links = publication_links | strip %}
+{% if item.citation and publication_links != "" %}
+  <p{% if include.small %} style="font-size: smaller"{% endif %}>Recommended citation: {{ item.citation }}<br />{{ publication_links }}</p>
+{% elsif item.citation %}
+  <p{% if include.small %} style="font-size: smaller"{% endif %}>Recommended citation: {{ item.citation }}</p>
+{% elsif publication_links != "" %}
+  <p{% if include.small %} style="font-size: smaller"{% endif %}>{{ publication_links }}</p>
+{% endif %}

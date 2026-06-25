@@ -1,12 +1,15 @@
 # Ignore the contents of the _site directory and other cache directories
 _site/
 .sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 # Ignore the directory for local files during development
 local/
 
 # Ignore the Gemfile that is generated
 Gemfile.lock
+Gemfile.bak
 
 # Ignore files created by npm
 node_modules
@@ -15,6 +18,10 @@ package-lock.json
 # Ignore the vendor file at root level and bundle for alternative installation
 /vendor/
 .bundle/
+
+# Ignore local preview helpers for Ruby versions newer than GitHub Pages uses
+scripts/preview.sh
+scripts/ruby4_jekyll_compat.rb
 
 # Ignore folders related to IDEs
 .vscode/
