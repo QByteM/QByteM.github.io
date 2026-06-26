@@ -4,6 +4,8 @@
 {% assign interpretation_url = item.interpretationurl_cn | default: item.explanationurl_cn %}
 {% assign code_url = item.codeurl | default: item.githuburl %}
 {% assign official_url = item.officialurl | default: item.officialversionurl %}
+{% assign slides_url = item.slidesurl | default: item.slides_url %}
+{% assign bibtex_url = item.bibtexurl | default: item.bibtex_url %}
 {% capture publication_links %}
   {% if item.paperurl %}<a href="{{ item.paperurl }}">PDF</a>{% endif %}
   {% if project_url %}{% if item.paperurl %} | {% endif %}<a href="{{ project_url }}">Project Page</a>{% endif %}
@@ -11,6 +13,8 @@
   {% if interpretation_url %}{% if item.paperurl or project_url or translation_url %} | {% endif %}<a href="{{ interpretation_url }}">中文解读</a>{% endif %}
   {% if code_url %}{% if item.paperurl or project_url or translation_url or interpretation_url %} | {% endif %}<a href="{{ code_url }}">Code</a>{% endif %}
   {% if official_url %}{% if item.paperurl or project_url or translation_url or interpretation_url or code_url %} | {% endif %}<a href="{{ official_url }}">Official Version</a>{% endif %}
+  {% if slides_url %}{% if item.paperurl or project_url or translation_url or interpretation_url or code_url or official_url %} | {% endif %}<a href="{{ slides_url }}">Slides</a>{% endif %}
+  {% if bibtex_url %}{% if item.paperurl or project_url or translation_url or interpretation_url or code_url or official_url or slides_url %} | {% endif %}<a href="{{ bibtex_url }}">BibTeX</a>{% endif %}
 {% endcapture %}
 {% assign publication_links = publication_links | strip %}
 {% if item.citation and publication_links != "" %}
