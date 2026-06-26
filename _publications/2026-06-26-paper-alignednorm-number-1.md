@@ -9,7 +9,7 @@ venue: 'International Conference on Machine Learning (ICML)'
 slidesurl: '/files/AlignedNorm_slide.pptx'
 paperurl: '/files/AlignedNorm_EN.pdf'
 paperurl_cn: '/files/AlignedNorm_CN.pdf'
-projectpageurl:
+projectpageurl: '/alignednorm/'
 interpretationurl_cn:
 codeurl: 'https://github.com/QByteM/AlignedNorm'
 officialurl: 'https://openreview.net/forum?id=aQAWAtrxxe'
