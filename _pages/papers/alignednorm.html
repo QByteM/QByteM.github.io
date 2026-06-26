@@ -383,25 +383,25 @@ excerpt: "AlignedNorm studies process generalization in prompt learning by model
 
   <figure class="an-figure an-hero-figure">
     <img src="{{ '/_pages/papers/images/alignednorm/Arch.png' | relative_url }}" alt="Comparison of end-to-end, decoupled, and coupled prompt-learning paradigms.">
-    <figcaption>AlignedNorm studies prompt learning from the perspective of adaptation dynamics: the learned change should act consistently on both base and new classes.</figcaption>
+    <figcaption>AlignedNorm studies prompt learning from the perspective of adaptation dynamics: the learned change should act consistently on both base class and new class.</figcaption>
   </figure>
 
   <section class="an-section">
     <div class="an-prose">
       <p class="an-kicker">Motivation</p>
       <h2>Process Generalization, Not Only Result Generalization</h2>
-      <p>Prompt learning adapts CLIP-like vision-language models with a small set of learnable context tokens. The central difficulty is the base-new tradeoff: stronger adaptation to seen classes often weakens performance on unseen classes, while preserving the pretrained space too strictly limits downstream adaptation.</p>
-      <p>Many existing methods define a desired fine-tuned endpoint and then regularize the model toward that endpoint. AlignedNorm asks a different question: if the model learns a change from base classes, can the same change pattern still act on new classes and improve both sides? We refer to this as process generalization. It shifts the focus from where each feature should finally land to whether the adaptation field itself is shared and stable across categories.</p>
+      <p>Prompt learning adapts CLIP-like vision-language models with a small set of learnable context tokens. The central difficulty is the base class and new class tradeoff: stronger adaptation to base class often weakens performance on new class, while preserving the pretrained space too strictly limits downstream adaptation.</p>
+      <p>Many existing methods define a desired fine-tuned endpoint and then regularize the model toward that endpoint. AlignedNorm asks a different question: if the model learns a change from base class, can the same change pattern still act on new class and improve both sides? We refer to this as process generalization. It shifts the focus from where each feature should finally land to whether the adaptation field itself is shared and stable across base class and new class.</p>
     </div>
 
     <div class="an-comparison">
       <article class="an-comparison-item">
         <h3>Result-first view</h3>
-        <p>Searches for an ideal target representation after tuning. This is difficult in open settings because unseen-class endpoints cannot be reliably inferred from seen classes alone.</p>
+        <p>Searches for an ideal target representation after tuning. This is difficult in open settings because new class endpoints cannot be reliably inferred from base class alone.</p>
       </article>
       <article class="an-comparison-item">
         <h3>Process-first view</h3>
-        <p>Models prompt tuning as a field of changes over the feature space. Generalization requires this field to remain coupled between base and new classes.</p>
+        <p>Models prompt tuning as a field of changes over the feature space. Generalization requires this field to remain coupled between base class and new class.</p>
       </article>
     </div>
   </section>
@@ -410,12 +410,12 @@ excerpt: "AlignedNorm studies process generalization in prompt learning by model
     <div class="an-prose">
       <p class="an-kicker">Coupled Prompt Field</p>
       <h2>From Isolated Optimization to Shared Adaptation</h2>
-      <p>A Coupled Prompt Field (CPF) describes an adaptation process where base and new classes are not optimized as isolated groups. Instead, they are affected by a shared field whose direction and magnitude should be coherent across the representation space.</p>
-      <p>Under this view, generalization is not merely a final accuracy score on new classes. It also asks whether the learned transformation preserves a transferable rule: the same prompt-induced change should benefit seen and unseen categories without requiring category identity at inference time.</p>
+      <p>A Coupled Prompt Field (CPF) describes an adaptation process where base class and new class are not optimized as isolated groups. Instead, they are affected by a shared field whose direction and magnitude should be coherent across the representation space.</p>
+      <p>Under this view, generalization is not merely a final accuracy score on new class. It also asks whether the learned transformation preserves a transferable rule: the same prompt-induced change should benefit base class and new class without requiring class identity at inference time.</p>
     </div>
     <figure class="an-figure">
       <img src="{{ '/_pages/papers/images/alignednorm/field.png' | relative_url }}" alt="Illustration of isolated optimization and the coupled prompt field.">
-      <figcaption>Isolated optimization searches for separate targets, while a coupled prompt field asks whether base and new classes can share the same adaptation rule.</figcaption>
+      <figcaption>Isolated optimization searches for separate targets, while a coupled prompt field asks whether base class and new class can share the same adaptation rule.</figcaption>
     </figure>
   </section>
 
@@ -449,17 +449,17 @@ excerpt: "AlignedNorm studies process generalization in prompt learning by model
     <div class="an-prose">
       <p class="an-kicker">Results</p>
       <h2>Unified Inference Without Decoupled Test-Time Assumptions</h2>
-      <p>AlignedNorm is evaluated across base-to-new generalization, cross-dataset transfer, and robustness on ImageNet variants. In base-to-new generalization, it uses one unified inference rule for all samples, avoiding the test-time assumption that the model already knows whether an input belongs to a base or new class.</p>
-      <p>The results show that AlignedNorm improves new-class generalization while preserving base-class adaptation, and that its benefits extend beyond the base-to-new setting to transfer and robustness scenarios.</p>
+      <p>AlignedNorm is evaluated across base class to new class generalization, cross-dataset transfer, and robustness on ImageNet variants. In base class to new class generalization, it uses one unified inference rule for all samples, avoiding the test-time assumption that the model already knows whether an input belongs to base class or new class.</p>
+      <p>The results show that AlignedNorm improves new class generalization while preserving base class adaptation, and that its benefits extend beyond the base class to new class setting to transfer and robustness scenarios.</p>
     </div>
 
     <figure class="an-figure an-table-figure">
-      <img src="{{ '/_pages/papers/images/alignednorm/Tab1.png' | relative_url }}" alt="Base-to-new generalization table across 11 datasets.">
-      <figcaption>Base-to-new generalization under unified inference.</figcaption>
+      <img src="{{ '/_pages/papers/images/alignednorm/Tab1.png' | relative_url }}" alt="Base class to new class generalization table across 11 datasets.">
+      <figcaption>Base class to new class generalization under unified inference.</figcaption>
     </figure>
 
     <figure class="an-figure an-table-figure">
-      <img src="{{ '/_pages/papers/images/alignednorm/UTBalance.png' | relative_url }}" alt="Uniformity and tolerance analysis on base and new classes.">
+      <img src="{{ '/_pages/papers/images/alignednorm/UTBalance.png' | relative_url }}" alt="Uniformity and tolerance analysis on base class and new class.">
       <figcaption>Uniformity and tolerance analysis shows that AlignedNorm better balances global distribution uniformity and within-class aggregation.</figcaption>
     </figure>
 
@@ -479,7 +479,7 @@ excerpt: "AlignedNorm studies process generalization in prompt learning by model
     <div class="an-prose">
       <p class="an-kicker">Takeaway</p>
       <h2>Reliable Generalization Comes From Transferable Change</h2>
-      <p>AlignedNorm is not only a regularization loss for improving benchmark numbers. It reframes prompt learning as the construction of a coupled adaptation field and shows that norm control is a simple, effective way to stabilize this field. The broader message is that reliable result generalization should be supported by a change pattern that remains valid for unseen categories and transfer settings.</p>
+      <p>AlignedNorm is not only a regularization loss for improving benchmark numbers. It reframes prompt learning as the construction of a coupled adaptation field and shows that norm control is a simple, effective way to stabilize this field. The broader message is that reliable result generalization should be supported by a change pattern that remains valid for new class and transfer settings.</p>
     </div>
   </section>
 
