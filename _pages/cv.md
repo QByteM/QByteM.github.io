@@ -3,62 +3,40 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+hide_title: true
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+* [ICML 2026] [AlignedNorm: Prompting Vision-Language Models via Coupled Prompt Field]({{ base_path }}/publication/2009-10-01-paper-title-number-1)  
+  **Qi Ma**, Chen-Yang Wang, Dehong Gao, Deng-Ping Fan*
+
+Project & Internship
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
+* 2024.01 - 2025.05, High-Precision Human Instance Segmentation, OPPO.
+  * Responsible for data curation, algorithm design, and model training/testing.
+
+Academic Services
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
+* Journal Reviewer: IEEE TPAMI, IEEE TIP, VI, MIR
+* Conference Reviewer: ICML 2026, CVPR 2024-2025
+* Teaching Assistant: Discrete Mathematics (2025 Fall), Computer Vision (2025 Spring)
+
+Education
 ======
-* Currently signed in to 43 different slack teams
+* 2024.09 - (now), Ph.D. student in the College of Computer Science, Nankai University.
+* 2020.09 - 2024.06, undergraduate student in the College of Computer Science, Nankai University.
+
+Major Honors & Awards
+======
+* 2024, Excellent Graduation Thesis (5 in College of Computer Science), Nankai University
+* 2023, ["95 Core" Scholarship (8 in College of Computer Science and Cyberspace Security), Nankai University](https://mp.weixin.qq.com/s/rFxD4QaRHcinEDMFUeZs0A)
+* 2023, [National Second Prize, Huawei BiSheng Cup Compiler System Design Competition](https://compiler.educg.net/#/oldDetail?name=2023全国大学生计算机系统能力大赛编译系统设计赛)
+* 2022, [First Prize, Tianjin Division, Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)](https://jw.tjut.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1143802344&wbfileid=3871849)
+* 2021, "Gongneng" Scholarship, College of Computer Science, Nankai University
+* 2021, First Prize, Tianjin Division, Mathematics competition of Chinese College Students (CMC)
+
