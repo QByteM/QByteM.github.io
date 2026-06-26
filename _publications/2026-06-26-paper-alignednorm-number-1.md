@@ -5,7 +5,7 @@ category: conferences
 permalink: /publication/2026-06-26-paper-alignednorm-number-1
 excerpt: 'AlignedNorm rethinks prompt learning for vision-language models as Coupled Prompt Field construction. By dynamically aligning prompt-token norms to the native scale of pretrained VLMs, it stabilizes task-agnostic coupling between base and new classes and improves generalization without external distillation or decoupled inference.'
 date: 2026-06-26
-venue: 'ICML'
+venue: 'International Conference on Machine Learning (ICML)'
 slidesurl: '/files/AlignedNorm_slide.pptx'
 paperurl: '/files/AlignedNorm_EN.pdf'
 paperurl_cn: '/files/AlignedNorm_CN.pdf'
