@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Qi Ma received his B.Eng. degree in Computer Science from Nankai University in June 2024. He is currently a second-year Phd student at Tianjin Key Laboratory of Visual Computing and Intelligent Perception (VCIP, the lab is lead by Prof. [Ming-Ming Cheng](https://scholar.google.com/citations?user=huWpVyEAAAAJ)), Nankai University, advised by Prof. [Deng-Ping Fan](https://scholar.google.com/citations?user=kakwJ5QAAAAJ). 
+Qi Ma is currently a second-year Phd student at Nankai University, advised by Prof. [Deng-Ping Fan](https://scholar.google.com/citations?user=kakwJ5QAAAAJ). He is affiliated with the Tianjin Key Laboratory of Visual Computing and Intelligent Perception (VCIP), led by Prof. [Ming-Ming Cheng](https://scholar.google.com/citations?user=huWpVyEAAAAJ). He received his B.Eng. degree in Computer Science from Nankai University in June 2024.
 
 Research Interests
 ======
