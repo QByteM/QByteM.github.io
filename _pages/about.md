@@ -17,4 +17,4 @@ I am broadly interested in generalization, machine learning, recursive self-impr
 
 News
 ======
-- AlignedNorm is accepted by ICML'26, thanks for all the collaborators!
+- [AlignedNorm](https://qbytem.github.io/alignednorm/) is accepted by ICML'26, thanks for all the collaborators!
