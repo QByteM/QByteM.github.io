@@ -18,3 +18,9 @@ I am broadly interested in generalization, machine learning, recursive self-impr
 News
 ======
 - [AlignedNorm](https://qbytem.github.io/alignednorm/) is accepted by ICML'26, thanks for all the collaborators!
+
+<p style="font-size: 0.8em; color: #888; margin-top: 2em;">
+  Visitors: <span id="busuanzi_site_uv">...</span>
+  &nbsp;·&nbsp;
+  Views: <span id="busuanzi_site_pv">...</span>
+</p>
